@@ -7,7 +7,7 @@ function boolToWord( bool ){
 }
 
 let boolToWord = bool => bool ? 'Yes' : 'No';
-
+v
 
 function boolToWord( bool ){
   if (bool) {

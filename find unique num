@@ -5,3 +5,25 @@ findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
 It’s guaranteed that array contains at least 3 numbers.
 
 The tests contain some very huge arrays, so think about performance.
+
+1.
+
+
+Using sort
+//sort array 
+//pop off vals unti the unqieue val in found 
+
+
+function findUniq(arr) {
+  arr.sort((a,b)=>a-b);
+  return arr[0]==arr[1]?arr.pop():arr[0]
+}
+
+
+2. 
+
+Using find function 
+
+function findUniq(arr) {
+  return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+}

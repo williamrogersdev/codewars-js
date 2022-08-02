@@ -15,3 +15,29 @@ printer_error(s) => "0/14"
 s="aaaxbbbbyyhwawiwjjjwwm"
 printer_error(s) => "8/22"
 
+
+1.
+
+
+//usimng replace
+//find and replace all good chars with an empty string
+//return total length
+
+
+
+const printerError = s => `${s.replace(/[a-m]/gi, "").length}/${s.length}`;
+
+
+2.
+
+
+function printerError(s) {
+    // your code
+    var count = 0;
+    for(var i = 0; i < s.length; i++) {
+      if (s[i] > "m") {
+        count++;
+      }
+    }
+    return count+"/"+s.length;
+}

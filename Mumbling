@@ -8,7 +8,7 @@ The parameter of accum is a string which includes only letters from a..z and A..
 
 FUNDAMENTALSSTRINGSPUZZLES
 
-
+1. Using Map
 
 function accum(s) {
 return [...s].map((ele,index) => {
@@ -16,4 +16,12 @@ return [...s].map((ele,index) => {
 }).join("-")
 
 
+}
+
+
+2. Using Reduce 
+
+
+function accum(s) {
+  return [...s.toUpperCase()].reduce((acc, cur, index) => acc + "-" + cur + cur.toLowerCase().repeat(index))
 }
